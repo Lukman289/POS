@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Category;
 use App\Http\Controllers\Home;
+use App\Http\Controllers\Seller;
 use App\Http\Controllers\User;
 use Illuminate\Support\Facades\Route;
 
@@ -30,3 +31,5 @@ Route::prefix('category')->group(function () {
 });
 
 Route::get('/user/{id}/name/{name}', [User::class, 'index']);
+
+Route::get('/penjual', [Seller::class, 'index']);
