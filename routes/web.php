@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Category;
+use App\Http\Controllers\Home;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', [Home::class, 'index']);
 
 Route::prefix('category')->group(function () {
     Route::get('/food-beverage', [Category::class, 'food_beverage']);
