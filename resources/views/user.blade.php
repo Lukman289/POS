@@ -7,7 +7,7 @@
     <title>{{$name}}</title>
 </head>
 <body>
-    <h3>User Id: $id</h3>
-    <h3>User Name: $name</h3>
+    <h3>User Id: {{$id}}</h3>
+    <h3>User Name: {{$name}}</h3>
 </body>
 </html>

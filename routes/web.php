@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Category;
 use App\Http\Controllers\Home;
+use App\Http\Controllers\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,9 +29,4 @@ Route::prefix('category')->group(function () {
     Route::get('/baby-kid', [Category::class, 'baby_kid']);
 });
 
-Route::get('/user/{id}/name/{name}', function ($id=0, $name='Udin') {
-    // return "<h1>Ini adalah user dengan Id: $id <br> Bernama: $name</h1>";
-    return view('user')
-    ->with('id', $id)
-    ->with('name', $name);
-});
+Route::get('/user/{id}/name/{name}', [User::class, 'index']);
